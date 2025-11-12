@@ -15,10 +15,11 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self):
         self.assertEqual(div(1,3), 3)
-        self.assertEqual(div(0, 3), 0)
-        self.assertEqual(div(6,-3), -2)
-        self.assertEqual(div(-6,3), -2)
-        self.assertAlmostEqual(div(1,3), 1/3)
+        self.assertEqual(div(3,0), 0)
+        self.assertAlmostEqual(div(6,-3), -1/2)
+        self.assertEqual(div(-3,6), -2)
+        self.assertEqual(div(3,-6), -2)
+        self.assertAlmostEqual(div(3,1), 1/3)
 
     def test_log_invalid_argument(self):
         self.assertEqual(logarithm(-2, 2), "logarithm undefined for non-positive a")
