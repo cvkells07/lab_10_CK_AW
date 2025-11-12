@@ -1,3 +1,6 @@
+# https://github.com/cvkells07/lab_10_CK_AW.git
+# Partner 1: Claire Kelleter
+# Partner 2: Avery Walh
 
 from calculator import *
 import unittest
@@ -54,22 +57,22 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(div(0,0), "division by zero")
 
     def test_logarithm(self):
-        self.assertEqual(round(log(10, 10), 5), 1.0)
-        self.assertEqual(round(log(100, 10), 5), 2.0)
-        self.assertEqual(round(log(1, 10), 5), 0.0)
-        self.assertEqual(round(log(8, 2), 5), 3.0)
-        self.assertEqual(round(log(16, 2), 5), 4.0)
-        self.assertEqual(round(log(1, 2), 5), 0.0)
-        self.assertEqual(round(log(math.e, math.e), 5), 1.0)
-        self.assertEqual(round(log(math.e**3, math.e), 5), 3.0)
-        self.assertEqual(round(log(1, math.e), 5), 0.0)
-        self.assertEqual(round(log(27, 3), 5), 3.0)
-        self.assertEqual(round(log(81, 9), 5), 2.0)
-        self.assertEqual(round(log(32, 2), 5), 5.0)
+        self.assertEqual(round(logarithm(10, 10), 5), 1.0)
+        self.assertEqual(round(logarithm(100, 10), 5), 2.0)
+        self.assertEqual(round(logarithm(1, 10), 5), 0.0)
+        self.assertEqual(round(logarithm(8, 2), 5), 3.0)
+        self.assertEqual(round(logarithm(16, 2), 5), 4.0)
+        self.assertEqual(round(logarithm(1, 2), 5), 0.0)
+        self.assertEqual(round(logarithm(math.e, math.e), 5), 1.0)
+        self.assertEqual(round(logarithm(math.e**3, math.e), 5), 3.0)
+        self.assertEqual(round(logarithm(1, math.e), 5), 0.0)
+        self.assertEqual(round(logarithm(27, 3), 5), 3.0)
+        self.assertEqual(round(logarithm(81, 9), 5), 2.0)
+        self.assertEqual(round(logarithm(32, 2), 5), 5.0)
 
     def test_log_invalid_base(self):
-        self.assertEqual(log(2, 1), "base must be positive and not equal to 1")
-        self.assertEqual(log(2, -1), "base must be positive and not equal to 1")
+        self.assertEqual(logarithm(2, 1), "base must be positive and not equal to 1")
+        self.assertEqual(logarithm(2, -1), "base must be positive and not equal to 1")
 
 if __name__ == '__main__':
     unittest.main()

@@ -5,7 +5,7 @@
 import math
 def square_root(a): 
     if a < 0:
-        raise ValueError("square root cannont be for a num less than zero")
+        return "square root cannont be for a num less than zero"
     return math.sqrt(a)
 
 def hypotenuse(a, b): 
@@ -22,14 +22,14 @@ def mul(a, b):
 
 def div(a, b): 
     if a == 0:
-        raise ZeroDivisionError("division by zero")
+        return "division by zero"
     return b/a
 
 def logarithm(a, b):
     if a <= 0:
-        raise ValueError("logarithm undefined for non-positive a")
+        return "logarithm undefined for non-positive a"
     if b <= 0 or b == 1:
-        raise ValueError("base must be positive and not equal to 1")
+        return "base must be positive and not equal to 1"
     return math.log(a, b)
 
 def exp(a, b): 
