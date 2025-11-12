@@ -1,3 +1,7 @@
+# https://github.com/cvkells07/lab_10_CK_AW.git
+# Partner 1: Claire Kelleter
+# Partner 2: Avery Walh
+
 import math
 def square_root(a): 
     if a < 0:
