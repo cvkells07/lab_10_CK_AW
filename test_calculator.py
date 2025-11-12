@@ -1,0 +1,47 @@
+from calculator import * 
+import unittest
+
+class TestCalculator(unittest.TestCase):
+    def test_add(self):
+        self.assertEqual(add(0,0), 0)
+        self.assertEqual(add(0,3), 3)
+        self.assertEqual(add(4,0), 4)
+        self.assertEqual(add(5,1), 6)
+        self.assertEqual(add(-1,3), 2)
+        self.assertEqual(add(5,-2), 3)
+        self.assertEqual(add(-4,-8), -12)
+        self.assertEqual(add(-3,0), -3)
+
+    def test_subtract(self):
+        self.assertEqual(sub(0,0), 0)
+        self.assertEqual(sub(5,0), 5)
+        self.assertEqual(sub(0,5), -5)
+        self.assertEqual(sub(3,2), 1)
+        self.assertEqual(sub(2,3), -1)
+        self.assertEqual(sub(3,-1), 4)
+        self.assertEqual(sub(-2,4), -6)
+        self.assertEqual(sub(-3,-3), 0)
+
+    def test_divide_by_zero(self):
+        self.assertEqual(div(0,0), "division by zero")
+
+    def test_logarithm(self):
+        self.assertEqual(round(log(10, 10), 5), 1.0)
+        self.assertEqual(round(log(100, 10), 5), 2.0)
+        self.assertEqual(round(log(1, 10), 5), 0.0)
+        self.assertEqual(round(log(8, 2), 5), 3.0)
+        self.assertEqual(round(log(16, 2), 5), 4.0)
+        self.assertEqual(round(log(1, 2), 5), 0.0)
+        self.assertEqual(round(log(math.e, math.e), 5), 1.0)
+        self.assertEqual(round(log(math.e**3, math.e), 5), 3.0)
+        self.assertEqual(round(log(1, math.e), 5), 0.0)
+        self.assertEqual(round(log(27, 3), 5), 3.0)
+        self.assertEqual(round(log(81, 9), 5), 2.0)
+        self.assertEqual(round(log(32, 2), 5), 5.0)
+
+    def test_log_invalid_base(self):
+        self.assertEqual(log(2, 1), "base must be positive and not equal to 1")
+        self.assertEqual(log(2, -1), "base must be positive and not equal to 1")
+
+if __name__ == '__main__':
+    unittest.main()
