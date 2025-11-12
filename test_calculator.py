@@ -1,4 +1,4 @@
-# https://github.com/cvkells07/lab_10_CK_AW.git
+https://github.com/cvkells07/lab_10_CK_AW.git
 # Partner 1: Claire Kelleter
 # Partner 2: Avery Walh
 
@@ -22,7 +22,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(div(1,3), 1/3)
 
     def test_log_invalid_argument(self):
-        self.assertEqual(log(-2, 2), "logarithm undefined for non-positive a")
+        self.assertEqual(logarithm(-2, 2), "logarithm undefined for non-positive a")
 
     def test_hypotenuse(self):
         self.assertEqual(hypotenuse(3, 4), 5)
@@ -31,8 +31,7 @@ class TestCalculator(unittest.TestCase):
     def test_sqrt(self):
         self.assertEqual(square_root(-3), "square root cannont be for a num less than zero")
         self.assertEqual(square_root(3), 9)
-        self.assertAlmostEqual(square_root(1/2), 1/4)from calculator import * 
-
+        self.assertAlmostEqual(square_root(1/2), 1/4)
     
     def test_add(self):
         self.assertEqual(add(0,0), 0)
@@ -45,14 +44,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(-3,0), -3)
 
     def test_subtract(self):
-        self.assertEqual(sub(0,0), 0)
-        self.assertEqual(sub(5,0), 5)
-        self.assertEqual(sub(0,5), -5)
-        self.assertEqual(sub(3,2), 1)
-        self.assertEqual(sub(2,3), -1)
-        self.assertEqual(sub(3,-1), 4)
-        self.assertEqual(sub(-2,4), -6)
-        self.assertEqual(sub(-3,-3), 0)
+        self.assertEqual(subtract(0,0), 0)
+        self.assertEqual(subtract(5,0), 5)
+        self.assertEqual(subtract(0,5), -5)
+        self.assertEqual(subtract(3,2), 1)
+        self.assertEqual(subtract(2,3), -1)
+        self.assertEqual(subtract(3,-1), 4)
+        self.assertEqual(subtract(-2,4), -6)
+        self.assertEqual(subtract(-3,-3), 0)
 
     def test_divide_by_zero(self):
         self.assertEqual(div(0,0), "division by zero")
