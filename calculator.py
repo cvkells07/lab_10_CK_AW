@@ -1,16 +1,24 @@
-op = input("Enter the operation: ")
-operand1 = float(input("Enter the first operand: "))
-operand2 = float(input("Enter the second operand: "))
-if op == "add":
-    result = operand1 + operand2
-elif op == "sub":
-    result = operand1 - operand2
-elif op == "mul":
-    result = operand1 * operand2
-elif op == "div":
-    result = operand1 / operand2
+import math
+def add(a, b): 
+    return a + b
 
-if result%1 == 0:
-    print(f"Result is {result:.1f}")
-else:
-    print(f"Result is {result:.2f}")
+def sub(a, b): 
+    return a - b
+
+def mul(a, b): 
+    return a * b
+
+def div(a, b): 
+    if a == 0:
+        raise ZeroDivisionError("division by zero")
+    return b/a
+
+def log(a, b):
+    if a <= 0:
+        raise ValueError("logarithm undefined for non-positive a")
+    if b <= 0 or b == 1:
+        raise ValueError("base must be positive and not equal to 1")
+    return math.log(a, b)
+
+def exp(a, b): 
+    return a**b
