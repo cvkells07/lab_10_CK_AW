@@ -14,7 +14,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(mul(30,3), 90)
 
     def test_divide(self):
-        self.assertEqual(div(3,1), 3)
+        self.assertEqual(div(1,3), 3)
         self.assertEqual(div(0, 3), 0)
         self.assertEqual(div(6,-3), -2)
         self.assertEqual(div(-6,3), -2)
@@ -30,7 +30,7 @@ class TestCalculator(unittest.TestCase):
     def test_sqrt(self):
         self.assertEqual(square_root(-3), "square root cannont be for a num less than zero")
         self.assertEqual(square_root(9), 3)
-        self.assertAlmostEqual(square_root(1/2), 1/4)
+        self.assertAlmostEqual(square_root(1/4), 1/2)
     
     def test_add(self):
         self.assertEqual(add(0,0), 0)
